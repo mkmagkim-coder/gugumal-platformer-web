@@ -6,3 +6,5 @@
 - 음악·효과음: OpenGameArt/Kenney 의 CC0 소재 (Tozan, yd, artisticdude, StarNinjas, Kenney)
 - 글꼴: 나눔고딕 (네이버, SIL Open Font License 1.1)
 - 그림: AI 생성물
+- AI 합성 음성: [elevenlabs.io](https://elevenlabs.io) (Free, 비상업 체험판)
+- 톰리 음악: SpringSpring / gilzoide, CC0. [자세한 출처](credits.html)
