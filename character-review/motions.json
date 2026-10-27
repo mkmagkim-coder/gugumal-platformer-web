@@ -1,0 +1,847 @@
+[
+  {
+    "sheet": "hero_01_ground",
+    "title": "주인공 · 대기·걷기·달리기·앉기",
+    "character": "hero",
+    "poses": [
+      {
+        "id": "idle_breathe",
+        "description": "relaxed sword lowered idle breathing",
+        "cell": 1,
+        "label": "대기 · 호흡"
+      },
+      {
+        "id": "idle_alert",
+        "description": "alert idle, head turned slightly, sword ready",
+        "cell": 2,
+        "label": "대기 · 경계"
+      },
+      {
+        "id": "walk_contact",
+        "description": "slow walk right, leading heel contact",
+        "cell": 3,
+        "label": "걷기 · 발 디딤"
+      },
+      {
+        "id": "walk_pass",
+        "description": "slow walk right passing step, planted foot under hips",
+        "cell": 4,
+        "label": "걷기 · 다리 교차"
+      },
+      {
+        "id": "walk_push",
+        "description": "slow walk right toe push-off",
+        "cell": 5,
+        "label": "걷기 · 밀어내기"
+      },
+      {
+        "id": "run_contact",
+        "description": "fast run right long forward stride, torso leans",
+        "cell": 6,
+        "label": "달리기 · 발 디딤"
+      },
+      {
+        "id": "run_flight",
+        "description": "fast run right airborne stride, scarf streams left",
+        "cell": 7,
+        "label": "달리기 · 공중 보폭"
+      },
+      {
+        "id": "run_push",
+        "description": "fast run right powerful back-foot push-off",
+        "cell": 8,
+        "label": "달리기 · 밀어내기"
+      },
+      {
+        "id": "crouch_enter",
+        "description": "bend knees entering compact crouch, blade safe",
+        "cell": 9,
+        "label": "앉기 진입"
+      },
+      {
+        "id": "crouch_hold",
+        "description": "low crouching ready stance",
+        "cell": 10,
+        "label": "앉기 유지"
+      },
+      {
+        "id": "crouch_exit",
+        "description": "rise smoothly from crouch",
+        "cell": 11,
+        "label": "일어서기"
+      },
+      {
+        "id": "turn",
+        "description": "plant foot and pivot direction, still mostly profile",
+        "cell": 12,
+        "label": "방향 전환"
+      }
+    ]
+  },
+  {
+    "sheet": "hero_02_air",
+    "title": "주인공 · 점프·낙하·착지·벽 이동",
+    "character": "hero",
+    "poses": [
+      {
+        "id": "jump_takeoff",
+        "description": "deep jump anticipation squat",
+        "cell": 1,
+        "label": "점프 준비"
+      },
+      {
+        "id": "jump_push",
+        "description": "jump upward explosive leg extension",
+        "cell": 2,
+        "label": "점프 도약"
+      },
+      {
+        "id": "jump_rise",
+        "description": "ascending jump knees slightly tucked",
+        "cell": 3,
+        "label": "점프 상승"
+      },
+      {
+        "id": "jump_apex",
+        "description": "jump apex compact floating pose",
+        "cell": 4,
+        "label": "점프 정점"
+      },
+      {
+        "id": "fall",
+        "description": "falling descent, arms balance and knees ready",
+        "cell": 5,
+        "label": "낙하"
+      },
+      {
+        "id": "land",
+        "description": "soft landing compressed knees, blade away from legs",
+        "cell": 6,
+        "label": "착지 압축"
+      },
+      {
+        "id": "land_recover",
+        "description": "stand up after landing",
+        "cell": 7,
+        "label": "착지 회복"
+      },
+      {
+        "id": "doublejump_curl",
+        "description": "double jump somersault tucked compact",
+        "cell": 8,
+        "label": "이중점프 · 몸 말기"
+      },
+      {
+        "id": "doublejump_open",
+        "description": "double jump untuck into landing readiness",
+        "cell": 9,
+        "label": "이중점프 · 몸 펴기"
+      },
+      {
+        "id": "wallslide",
+        "description": "slide down wall at right, boot soles and free hand braced",
+        "cell": 10,
+        "label": "벽 미끄러짐"
+      },
+      {
+        "id": "walljump",
+        "description": "kick off wall at right and launch left, sword in hand",
+        "cell": 11,
+        "label": "벽점프"
+      },
+      {
+        "id": "air_ready",
+        "description": "airborne guarded sword ready stance",
+        "cell": 12,
+        "label": "공중 준비"
+      }
+    ]
+  },
+  {
+    "sheet": "hero_03_dash_ledge",
+    "title": "주인공 · 대시·구르기·매달림·오르기",
+    "character": "hero",
+    "poses": [
+      {
+        "id": "dash_start",
+        "description": "low forward dash anticipation, shoulders compressed",
+        "cell": 1,
+        "label": "대시 준비"
+      },
+      {
+        "id": "dash",
+        "description": "forward dash horizontal lunge, blade trailing safely",
+        "cell": 2,
+        "label": "대시 전진"
+      },
+      {
+        "id": "dash_end",
+        "description": "dash braking planted forward foot",
+        "cell": 3,
+        "label": "대시 제동"
+      },
+      {
+        "id": "roll_curl_1",
+        "description": "landing roll entering shoulder tuck",
+        "cell": 4,
+        "label": "구르기 · 1단계"
+      },
+      {
+        "id": "roll_curl_2",
+        "description": "landing roll tightly curled facing ground",
+        "cell": 5,
+        "label": "구르기 · 2단계"
+      },
+      {
+        "id": "roll_curl_3",
+        "description": "landing roll inverted tucked body, face not hidden by mask",
+        "cell": 6,
+        "label": "구르기 · 3단계"
+      },
+      {
+        "id": "roll_curl_4",
+        "description": "landing roll unfurl back onto feet",
+        "cell": 7,
+        "label": "구르기 · 4단계"
+      },
+      {
+        "id": "hang",
+        "description": "ledge hang both hands reaching overhead to unseen ledge",
+        "cell": 8,
+        "label": "모서리 매달림"
+      },
+      {
+        "id": "climb_a",
+        "description": "ledge climb pull-up chest raised above unseen edge",
+        "cell": 9,
+        "label": "모서리 끌어올림"
+      },
+      {
+        "id": "climb_b",
+        "description": "ledge climb knee up onto edge",
+        "cell": 10,
+        "label": "모서리 무릎 올림"
+      },
+      {
+        "id": "climb_finish",
+        "description": "finish ledge climb standing balanced",
+        "cell": 11,
+        "label": "모서리 오르기 마무리"
+      },
+      {
+        "id": "glide",
+        "description": "wing-suit glide with dark cloth panels between outstretched limbs, same outfit",
+        "cell": 12,
+        "label": "활공"
+      }
+    ]
+  },
+  {
+    "sheet": "hero_04_hook",
+    "title": "주인공 · 갈고리·스윙·활공",
+    "character": "hero",
+    "poses": [
+      {
+        "id": "hook_1",
+        "description": "grappling hook windup with free hand, sword held away",
+        "cell": 1,
+        "label": "갈고리 준비"
+      },
+      {
+        "id": "hook_2",
+        "description": "grappling hook release forward and upward to right",
+        "cell": 2,
+        "label": "갈고리 투척"
+      },
+      {
+        "id": "hook_3",
+        "description": "grappling hook rope catch, raised hand gripping rope above head",
+        "cell": 3,
+        "label": "줄 잡기"
+      },
+      {
+        "id": "hook_4",
+        "description": "swing back at left arc, hands overhead holding short rope",
+        "cell": 4,
+        "label": "스윙 뒤쪽"
+      },
+      {
+        "id": "hook_5",
+        "description": "swing lowest midpoint, arms extended overhead, legs trailing",
+        "cell": 5,
+        "label": "스윙 최저점"
+      },
+      {
+        "id": "hook_6",
+        "description": "swing forward at right arc, legs forward, hands overhead",
+        "cell": 6,
+        "label": "스윙 앞쪽"
+      },
+      {
+        "id": "hook_7",
+        "description": "release rope into tucked forward flip",
+        "cell": 7,
+        "label": "줄 놓기 · 회전"
+      },
+      {
+        "id": "hook_8",
+        "description": "open out from flip into soaring jump",
+        "cell": 8,
+        "label": "줄 놓기 · 비행"
+      },
+      {
+        "id": "hook_9",
+        "description": "grapple landing crouch using one hand for balance",
+        "cell": 9,
+        "label": "갈고리 착지"
+      },
+      {
+        "id": "hook_miss",
+        "description": "missed grapple recover hand pulling back",
+        "cell": 10,
+        "label": "갈고리 실패 회수"
+      },
+      {
+        "id": "glide_enter",
+        "description": "unfold dark wing cloth from outfit, arms open",
+        "cell": 11,
+        "label": "활공 진입"
+      },
+      {
+        "id": "glide_exit",
+        "description": "fold dark wing cloth and tuck legs for landing",
+        "cell": 12,
+        "label": "활공 종료"
+      }
+    ]
+  },
+  {
+    "sheet": "hero_05_combo12",
+    "title": "주인공 · 기본 연격 1·2타",
+    "character": "hero",
+    "poses": [
+      {
+        "id": "s1_1",
+        "description": "ground sword combo hit 1: anticipation drawn back",
+        "cell": 1,
+        "label": "1타 · 1컷 (준비)"
+      },
+      {
+        "id": "s1_2",
+        "description": "ground sword combo hit 1: windup turning hips",
+        "cell": 2,
+        "label": "1타 · 2컷 (준비)"
+      },
+      {
+        "id": "s1_3",
+        "description": "ground sword combo hit 1: CONTACT full extension blade sweeping forward horizontal",
+        "cell": 3,
+        "label": "1타 · 3컷 (접촉)"
+      },
+      {
+        "id": "s1_4",
+        "description": "ground sword combo hit 1: CONTACT follow-through blade crossing front",
+        "cell": 4,
+        "label": "1타 · 4컷 (접촉)"
+      },
+      {
+        "id": "s1_5",
+        "description": "ground sword combo hit 1: recovery blade decelerating",
+        "cell": 5,
+        "label": "1타 · 5컷 (회수)"
+      },
+      {
+        "id": "s1_6",
+        "description": "ground sword combo hit 1: ready stance link into next hit",
+        "cell": 6,
+        "label": "1타 · 6컷 (회수)"
+      },
+      {
+        "id": "s2_1",
+        "description": "ground sword combo hit 2: anticipation drawn back",
+        "cell": 7,
+        "label": "2타 · 1컷 (준비)"
+      },
+      {
+        "id": "s2_2",
+        "description": "ground sword combo hit 2: windup turning hips",
+        "cell": 8,
+        "label": "2타 · 2컷 (준비)"
+      },
+      {
+        "id": "s2_3",
+        "description": "ground sword combo hit 2: CONTACT full extension blade sweeping diagonal upward",
+        "cell": 9,
+        "label": "2타 · 3컷 (접촉)"
+      },
+      {
+        "id": "s2_4",
+        "description": "ground sword combo hit 2: CONTACT follow-through blade crossing front",
+        "cell": 10,
+        "label": "2타 · 4컷 (접촉)"
+      },
+      {
+        "id": "s2_5",
+        "description": "ground sword combo hit 2: recovery blade decelerating",
+        "cell": 11,
+        "label": "2타 · 5컷 (회수)"
+      },
+      {
+        "id": "s2_6",
+        "description": "ground sword combo hit 2: ready stance link into next hit",
+        "cell": 12,
+        "label": "2타 · 6컷 (회수)"
+      }
+    ]
+  },
+  {
+    "sheet": "hero_06_combo34",
+    "title": "주인공 · 기본 연격 3·4타",
+    "character": "hero",
+    "poses": [
+      {
+        "id": "s3_1",
+        "description": "ground sword combo hit 3: anticipation twisting low",
+        "cell": 1,
+        "label": "3타 · 1컷 (준비)"
+      },
+      {
+        "id": "s3_2",
+        "description": "ground sword combo hit 3: windup coiled body",
+        "cell": 2,
+        "label": "3타 · 2컷 (준비)"
+      },
+      {
+        "id": "s3_3",
+        "description": "ground sword combo hit 3: CONTACT full extension reverse diagonal slash",
+        "cell": 3,
+        "label": "3타 · 3컷 (접촉)"
+      },
+      {
+        "id": "s3_4",
+        "description": "ground sword combo hit 3: CONTACT follow-through wide reverse cut",
+        "cell": 4,
+        "label": "3타 · 4컷 (접촉)"
+      },
+      {
+        "id": "s3_5",
+        "description": "ground sword combo hit 3: recovery stabilizing feet",
+        "cell": 5,
+        "label": "3타 · 5컷 (회수)"
+      },
+      {
+        "id": "s3_6",
+        "description": "ground sword combo hit 3: recovery finish balanced, sword lowered",
+        "cell": 6,
+        "label": "3타 · 6컷 (회수)"
+      },
+      {
+        "id": "s4_1",
+        "description": "ground sword combo hit 4: anticipation twisting low",
+        "cell": 7,
+        "label": "4타 · 1컷 (준비)"
+      },
+      {
+        "id": "s4_2",
+        "description": "ground sword combo hit 4: windup coiled body",
+        "cell": 8,
+        "label": "4타 · 2컷 (준비)"
+      },
+      {
+        "id": "s4_3",
+        "description": "ground sword combo hit 4: CONTACT full extension powerful full-body spinning slash",
+        "cell": 9,
+        "label": "4타 · 3컷 (접촉)"
+      },
+      {
+        "id": "s4_4",
+        "description": "ground sword combo hit 4: CONTACT follow-through finish spin sword fully extended",
+        "cell": 10,
+        "label": "4타 · 4컷 (접촉)"
+      },
+      {
+        "id": "s4_5",
+        "description": "ground sword combo hit 4: recovery stabilizing feet",
+        "cell": 11,
+        "label": "4타 · 5컷 (회수)"
+      },
+      {
+        "id": "s4_6",
+        "description": "ground sword combo hit 4: recovery finish balanced, sword lowered",
+        "cell": 12,
+        "label": "4타 · 6컷 (회수)"
+      }
+    ]
+  },
+  {
+    "sheet": "hero_07_directional",
+    "title": "주인공 · 위·아래·대시·공중 공격",
+    "character": "hero",
+    "poses": [
+      {
+        "id": "up_a",
+        "description": "upward sword attack anticipation blade low",
+        "cell": 1,
+        "label": "올려베기 준비"
+      },
+      {
+        "id": "up_b",
+        "description": "upward sword CONTACT, rising diagonal cut overhead",
+        "cell": 2,
+        "label": "올려베기 타격"
+      },
+      {
+        "id": "up_c",
+        "description": "upward sword recovery from overhead arc",
+        "cell": 3,
+        "label": "올려베기 회수"
+      },
+      {
+        "id": "down_a",
+        "description": "aerial downward attack anticipation, blade raised high",
+        "cell": 4,
+        "label": "내려찍기 준비"
+      },
+      {
+        "id": "down_b",
+        "description": "aerial downward CONTACT sword tip thrust straight down, hands on hilt",
+        "cell": 5,
+        "label": "내려찍기 타격"
+      },
+      {
+        "id": "down_recover",
+        "description": "downward attack recovery upon landing, knees bent",
+        "cell": 6,
+        "label": "내려찍기 회복"
+      },
+      {
+        "id": "dashattack_start",
+        "description": "dash slash anticipation sword drawn back and low",
+        "cell": 7,
+        "label": "돌진베기 준비"
+      },
+      {
+        "id": "dashattack_hit",
+        "description": "dash slash CONTACT long horizontal blade lunge right",
+        "cell": 8,
+        "label": "돌진베기 타격"
+      },
+      {
+        "id": "dashattack_end",
+        "description": "dash slash recovery braking low",
+        "cell": 9,
+        "label": "돌진베기 회수"
+      },
+      {
+        "id": "airslash_start",
+        "description": "aerial sword attack anticipation midair body twisted",
+        "cell": 10,
+        "label": "공중베기 준비"
+      },
+      {
+        "id": "airslash_hit",
+        "description": "aerial sword CONTACT sweeping forward midair",
+        "cell": 11,
+        "label": "공중베기 타격"
+      },
+      {
+        "id": "airslash_end",
+        "description": "aerial sword recovery legs ready to fall",
+        "cell": 12,
+        "label": "공중베기 회수"
+      }
+    ]
+  },
+  {
+    "sheet": "hero_08_special",
+    "title": "주인공 · 가드·피격·필살기",
+    "character": "hero",
+    "poses": [
+      {
+        "id": "guard_a",
+        "description": "raise blade defensively in front chest",
+        "cell": 1,
+        "label": "가드 올림"
+      },
+      {
+        "id": "guard",
+        "description": "hold firm defensive sword guard stance",
+        "cell": 2,
+        "label": "가드 유지"
+      },
+      {
+        "id": "parry",
+        "description": "successful parry redirect blade at sharp angle, confident face",
+        "cell": 3,
+        "label": "패링 성공"
+      },
+      {
+        "id": "hurt",
+        "description": "non-gory hit reaction recoil shoulders, sword retained",
+        "cell": 4,
+        "label": "피격"
+      },
+      {
+        "id": "hurt_b",
+        "description": "non-gory hit reaction recover balance, grimace",
+        "cell": 5,
+        "label": "피격 회복"
+      },
+      {
+        "id": "defeat",
+        "description": "non-gory defeated sitting on ground exhausted, no injury",
+        "cell": 6,
+        "label": "탈진"
+      },
+      {
+        "id": "summon",
+        "description": "ultimate ready focused pose sword held upright",
+        "cell": 7,
+        "label": "필살기 준비"
+      },
+      {
+        "id": "rush_start",
+        "description": "ultimate rush draw blade coiled low stance",
+        "cell": 8,
+        "label": "백화난무 준비"
+      },
+      {
+        "id": "rush_finish",
+        "description": "ultimate rush finishing cut, dignified low sword stance",
+        "cell": 9,
+        "label": "백화난무 마무리"
+      },
+      {
+        "id": "blade_lift",
+        "description": "ultimate blade rain raise sword to sky",
+        "cell": 10,
+        "label": "천검우 · 검 들어올림"
+      },
+      {
+        "id": "blade_release",
+        "description": "ultimate blade rain throw sword upward, empty hand extended high",
+        "cell": 11,
+        "label": "천검우 · 검 던짐"
+      },
+      {
+        "id": "blade_catch",
+        "description": "ultimate blade rain catch returned sword by hilt",
+        "cell": 12,
+        "label": "천검우 · 검 회수"
+      }
+    ]
+  },
+  {
+    "sheet": "hero_09_cutin",
+    "title": "주인공 · 필살기 컷인·눈·손·발",
+    "character": "hero",
+    "poses": [
+      {
+        "id": "rush_eye",
+        "description": "determined unmasked heroine face and eyes closeup, same cute head proportions",
+        "cell": 1,
+        "label": "백화난무 · 눈 클로즈업"
+      },
+      {
+        "id": "rush_hand",
+        "description": "close-up same heroine hands grip sword hilt and begin draw, preserve cuff/wrap",
+        "cell": 2,
+        "label": "백화난무 · 검 잡는 손"
+      },
+      {
+        "id": "rush_foot",
+        "description": "close-up same heroine red-laced boots stamp into firm launch stance",
+        "cell": 3,
+        "label": "백화난무 · 발 디딤"
+      },
+      {
+        "id": "rush_front",
+        "description": "front three-quarter full-body sword focus stance, unmasked same cute face",
+        "cell": 4,
+        "label": "백화난무 · 정면 준비"
+      },
+      {
+        "id": "rush_dash",
+        "description": "full-body low sword rush right, body extended and red scarf trailing",
+        "cell": 5,
+        "label": "백화난무 · 전신 돌진"
+      },
+      {
+        "id": "blade_front",
+        "description": "front three-quarter full-body heroine lifting sword to sky, serious cute unmasked face",
+        "cell": 6,
+        "label": "천검우 · 정면 준비"
+      },
+      {
+        "id": "blade_hand",
+        "description": "closeup open hand after sword toss upward, same black wrap and cream cuff",
+        "cell": 7,
+        "label": "천검우 · 투척 손"
+      },
+      {
+        "id": "blade_catch_close",
+        "description": "closeup hand catching returned curved sword by hilt, never grab blade",
+        "cell": 8,
+        "label": "천검우 · 회수 손"
+      }
+    ]
+  },
+  {
+    "sheet": "cheolho_01_move",
+    "title": "철호 · 이동·점프·착지·앉기",
+    "character": "cheolho",
+    "poses": [
+      {
+        "id": "idle",
+        "description": "parked heavy mech idle, pilot visible",
+        "cell": 1,
+        "label": "대기"
+      },
+      {
+        "id": "walk_a",
+        "description": "heavy walking right leading foot heel contact",
+        "cell": 2,
+        "label": "걷기 · A컷"
+      },
+      {
+        "id": "walk_b",
+        "description": "heavy walking right passing step hips centered",
+        "cell": 3,
+        "label": "걷기 · B컷"
+      },
+      {
+        "id": "walk_c",
+        "description": "heavy walking right opposite foot contact",
+        "cell": 4,
+        "label": "걷기 · C컷"
+      },
+      {
+        "id": "walk_d",
+        "description": "heavy walking right toe push off",
+        "cell": 5,
+        "label": "걷기 · D컷"
+      },
+      {
+        "id": "run",
+        "description": "accelerated heavy running right, wide stride and forward lean",
+        "cell": 6,
+        "label": "가속 보행"
+      },
+      {
+        "id": "takeoff",
+        "description": "jump takeoff deep compression through articulated knees",
+        "cell": 7,
+        "label": "도약 준비"
+      },
+      {
+        "id": "jet",
+        "description": "jump rise steam jets downward from back, knees tucked",
+        "cell": 8,
+        "label": "제트 상승"
+      },
+      {
+        "id": "fall",
+        "description": "jump fall legs extend ready to land",
+        "cell": 9,
+        "label": "낙하"
+      },
+      {
+        "id": "land",
+        "description": "heavy landing deep mechanical knee bend, no squash body",
+        "cell": 10,
+        "label": "착지 압축"
+      },
+      {
+        "id": "crouch",
+        "description": "low crouch articulated bent legs, solid torso unchanged",
+        "cell": 11,
+        "label": "앉기"
+      },
+      {
+        "id": "dash",
+        "description": "boosted forward dash right, knees low, steam trailing left",
+        "cell": 12,
+        "label": "대시 전진"
+      }
+    ]
+  },
+  {
+    "sheet": "cheolho_02_combat",
+    "title": "철호 · 철권·기관포·곡사포·탑승",
+    "character": "cheolho",
+    "poses": [
+      {
+        "id": "punch_windup",
+        "description": "metal fist punch anticipation fist drawn back",
+        "cell": 1,
+        "label": "철권 준비"
+      },
+      {
+        "id": "punch",
+        "description": "metal fist punch CONTACT fist fully extended right, shoulder rotation",
+        "cell": 2,
+        "label": "철권 타격"
+      },
+      {
+        "id": "punch_recover",
+        "description": "metal fist punch recovery retract elbow to guard",
+        "cell": 3,
+        "label": "철권 회수"
+      },
+      {
+        "id": "fire",
+        "description": "standing gatling fire barrel aimed right, recoil poised no muzzle flash",
+        "cell": 4,
+        "label": "기관포 사격"
+      },
+      {
+        "id": "crouch_fire",
+        "description": "crouching gatling fire aimed right, low profile",
+        "cell": 5,
+        "label": "앉아 사격"
+      },
+      {
+        "id": "lob_charge",
+        "description": "cannon charged shot windup barrel lifts diagonally upward",
+        "cell": 6,
+        "label": "곡사포 충전"
+      },
+      {
+        "id": "lob",
+        "description": "cannon lob shot CONTACT barrel aimed diagonally up-right recoil",
+        "cell": 7,
+        "label": "곡사포 발사"
+      },
+      {
+        "id": "lob_recover",
+        "description": "cannon lob recovery barrel returns to ready",
+        "cell": 8,
+        "label": "곡사포 회수"
+      },
+      {
+        "id": "hurt",
+        "description": "non-gory mech hit stagger pilot braced",
+        "cell": 9,
+        "label": "피격"
+      },
+      {
+        "id": "wreck",
+        "description": "disabled mech slumped on knees, intact pilot safe",
+        "cell": 10,
+        "label": "철호 정지"
+      },
+      {
+        "id": "board",
+        "description": "pilot climbing into open cockpit, same unmasked heroine",
+        "cell": 11,
+        "label": "탑승"
+      },
+      {
+        "id": "exit",
+        "description": "pilot climbing out safely from open cockpit, mech parked",
+        "cell": 12,
+        "label": "하차"
+      }
+    ]
+  }
+]
