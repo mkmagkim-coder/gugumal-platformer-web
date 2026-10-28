@@ -1,6 +1,6 @@
 // A release must replace the HTML and game pack together, including existing tabs.
 const CACHE_PREFIX = '구구말 플랫포머-sw-cache-';
-const CACHE_NAME = CACHE_PREFIX + '9bcb438cc2e9b7c9';
+const CACHE_NAME = CACHE_PREFIX + '95dd9a1a1b40e194';
 const ASSETS = new Set([
   /* motion packs */ "motion-packs.json", "motion-fb2a3359811d5f5d-01.pck", "motion-62e95d139669df5a-02.pck",
   'index.html', 'index.js', 'index.wasm', 'index.pck', 'index.png',
