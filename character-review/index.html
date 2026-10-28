@@ -1,10 +1,57 @@
-<!doctype html><html lang="ko"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>구구말 주인공·철호 동작 시안</title>
-<style>*{box-sizing:border-box}body{margin:0;background:#111820;color:#eef1f4;font:16px/1.65 system-ui,sans-serif}main{max-width:1200px;margin:auto;padding:24px 16px 80px}h1{font-size:clamp(24px,4vw,38px);line-height:1.3}h2{font-size:22px}p{color:#bcc8d6}a{color:#90caff}button{background:#243343;color:#fff;border:1px solid #697e91;border-radius:8px;padding:12px 18px;font:inherit;cursor:pointer}button[aria-pressed=true]{background:#3b657d}nav{position:sticky;top:0;z-index:2;background:#111820ee;padding:12px 0;display:flex;gap:8px;flex-wrap:wrap;backdrop-filter:blur(8px)}.badge{display:inline-block;padding:4px 10px;border:1px solid #c9a165;border-radius:20px;color:#f0c17b;font-size:14px}.masters{display:grid;grid-template-columns:1fr 1fr;gap:12px}.master{background:#d9dde3;border-radius:12px;padding:12px}.master img{display:block;width:100%;height:360px;object-fit:contain}.master b{color:#17212b}article{margin:36px 0;border-top:1px solid #344253;padding-top:16px}article img{display:block;width:100%;height:auto;border-radius:8px;background:#d9dde3}article a{display:block}.hint{font-size:14px}ol{padding-left:28px;columns:2;column-gap:30px;color:#bdcbd9}li{break-inside:avoid;margin:4px 0;overflow-wrap:anywhere}code{color:#c7e4ef;font-size:13px}.light article img{background:#fff}.dark article img{background:#26303d}[hidden]{display:none!important}@media(max-width:600px){main{padding:16px 10px 60px}.master img{height:220px}.master{padding:8px}h2{font-size:19px}ol{columns:1}.badge{font-size:12px}nav{gap:6px}button{padding:10px 12px}}
-</style><main><span class="badge">동작 시안 · 사용자 검토 전</span><h1>주인공·철호<br>같은 그림체로, 모든 동작 다시</h1><p>선택한 수정 외형을 기준으로 만든 11장·128개 키포즈 초안입니다. 정지화 시안이며, AutoSprite 애니메이션과 게임 적용은 시안 통과 후 진행합니다.</p>
-<div class="masters"><div class="master"><b>승인한 주인공 외형</b><a href="hero-master.png"><img src="hero-master.png" alt="승인된 무가면 주인공 외형"></a></div><div class="master"><b>승인한 철호 외형</b><a href="cheolho-master.png"><img src="cheolho-master.png" alt="승인된 철호 외형"></a></div></div>
-<p class="hint">주인공 걷기·앉기, 벽 전용 자세, 탑승·하차 등 기존에 독립 그림이 없던 동작도 확장 초안으로 포함했습니다. 시안의 칸 간 크기·여백은 최종 스프라이트 규격이 아닙니다. 최종 제작에서는 얼굴·무기·발 기준과 실제 타격 시점을 맞춥니다.</p>
-<nav aria-label="시안 필터"><button data-filter="all" aria-pressed="true">전체</button><button data-filter="hero" aria-pressed="false">주인공</button><button data-filter="cheolho" aria-pressed="false">철호</button><button id="background">배경 밝기 변경</button></nav><div id="gallery"></div><p>이미지를 누르면 원본 크기로 확대됩니다. 각 장의 순서는 왼쪽 위부터 한 줄에 4개입니다. 기존 캐릭터와 기존 동작 원본은 보존합니다.</p><p><a href="../">게임으로 돌아가기</a> · <a href="style-comparison.jpg">외형 변경 전후 비교</a></p></main>
+<!doctype html>
+<html lang="ko"><link rel="icon" href="data:,"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>주인공·철호 모션</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#111820;color:#eef1f4;font:16px/1.6 system-ui,sans-serif}main{max-width:1200px;margin:auto;padding:28px 16px 60px}h1{font-size:clamp(27px,4vw,40px);margin:12px 0}h2{margin:0;font-size:23px}p{color:#bdcbd9}a{color:#9bd3ff}button,select,input{font:inherit}button,select{color:inherit;background:#243343;border:1px solid #71869a;border-radius:8px;padding:9px 12px;min-height:44px}button{cursor:pointer}button[aria-pressed=true]{background:#42677e}button:focus-visible,a:focus-visible,select:focus-visible,input:focus-visible{outline:3px solid #ffcf6a;outline-offset:3px}.badge{border:1px solid #bda072;border-radius:20px;padding:4px 12px;color:#f3cf93;display:inline-block;font-size:14px}nav,.controls,.row{display:flex;gap:8px;flex-wrap:wrap;align-items:center}nav{margin:22px 0}.viewers{display:grid;grid-template-columns:1fr 1fr;gap:20px}article{min-width:0;border:1px solid #415265;background:#192330;border-radius:14px;padding:16px}.clip{display:block;width:100%;margin:8px 0 14px}.stage{background:#d9dde3;border-radius:10px;overflow:hidden}.stage canvas{display:block;width:100%;height:auto;aspect-ratio:1}.controls{margin:12px 0}.scrub{width:100%;accent-color:#9bd3ff}output{font-variant-numeric:tabular-nums}.status{min-height:26px;font-size:14px;margin:5px 0}.details{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;font-size:14px}.masters{display:flex;gap:20px;flex-wrap:wrap;margin-top:24px}.master{display:flex;align-items:center;gap:12px;font-size:14px}.master img{width:92px;height:116px;object-fit:contain;background:#d9dde3;border-radius:8px}.hint{font-size:14px}body[data-bg=light] .stage{background:#fff}body[data-bg=dark] .stage{background:#26303d}[hidden]{display:none!important}@media(max-width:700px){main{padding:20px 12px 45px}.viewers{grid-template-columns:1fr}article{padding:12px}.controls{gap:6px}button,select{padding:8px 10px}}@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto}}
+</style>
+<main><span class="badge">AutoSprite 제작본</span><h1>주인공·철호 모션</h1><p>동작을 골라 재생하거나 한 프레임씩 살펴보세요. 각 프레임은 원본 512×512 크기를 유지합니다.</p>
+<nav aria-label="캐릭터 필터"><button data-filter="all" aria-pressed="true">전체</button><button data-filter="hero" aria-pressed="false">주인공</button><button data-filter="cheolho" aria-pressed="false">철호</button><button id="background">배경: 회색</button></nav>
+<p id="message" role="status"></p><div class="viewers" id="viewers"></div>
+<div class="masters"><a class="master" href="hero-master.png" target="_blank" rel="noopener"><img src="hero-master.png" alt="승인한 주인공 외형" width="92" height="116"><span>주인공 외형 원본</span></a><a class="master" href="cheolho-master.png" target="_blank" rel="noopener"><img src="cheolho-master.png" alt="승인한 철호 외형" width="92" height="116"><span>철호 외형 원본</span></a></div>
+<p class="hint">반복 동작은 이어 재생하고, 단일 동작은 마지막 프레임에서 멈춥니다. 소리는 없습니다.</p><p><a href="poses.html">승인된 128개 동작 시안</a> · <a href="style-comparison.jpg">외형 비교</a> · <a href="../">게임으로 돌아가기</a></p></main>
 <script>
-fetch('motions.json').then(r=>{if(!r.ok)throw Error('목록 불러오기 실패');return r.json()}).then(items=>{const gallery=document.getElementById('gallery');for(const x of items){const a=document.createElement('article');a.dataset.character=x.character;const h=document.createElement('h2');h.textContent=x.title;a.append(h);const link=document.createElement('a');link.href=x.sheet+'.png';const img=document.createElement('img');img.src=x.sheet+'.png';img.alt=x.title+' 동작 시안';img.loading='lazy';img.width=1536;img.height=1024;link.append(img);a.append(link);const list=document.createElement('ol');for(const pose of x.poses){const li=document.createElement('li');li.textContent=pose.label||pose.id;list.append(li)}a.append(list);gallery.append(a)}}).catch(e=>{document.getElementById('gallery').textContent=e.message});
-for(const b of document.querySelectorAll('[data-filter]')) b.onclick=()=>{for(const t of document.querySelectorAll('[data-filter]'))t.setAttribute('aria-pressed',String(t===b));for(const a of document.querySelectorAll('article'))a.hidden=b.dataset.filter!=='all'&&a.dataset.character!==b.dataset.filter};let bg=0;document.getElementById('background').onclick=()=>{bg=(bg+1)%3;document.body.classList.toggle('light',bg===1);document.body.classList.toggle('dark',bg===2)};
+const viewers=[];
+function makeViewer(actor,clips){
+ const box=document.createElement('article');box.dataset.character=actor.name;
+ box.innerHTML='<h2></h2><label>동작 <span class="count"></span><select class="clip"></select></label><div class="stage"><canvas width="512" height="512"></canvas></div><p class="status" role="status"></p><div class="controls"><button class="play">일시정지</button><button class="previous" aria-label="이전 프레임">◀ 이전</button><button class="next" aria-label="다음 프레임">다음 ▶</button><label>속도 <select class="speed"><option value=".25">0.25배</option><option value=".5">0.5배</option><option value="1" selected>1배</option><option value="2">2배</option></select></label></div><label>프레임 <output></output><input class="scrub" type="range" min="0" value="0" max="31"></label><div class="details"><span class="info"></span><a class="original" target="_blank" rel="noopener">원본 시트 확대</a></div>';
+ box.querySelector('h2').textContent=actor.label;
+ box.querySelector('.count').textContent=clips.length+' / '+actor.total+'개';
+ const find=s=>box.querySelector(s),canvas=find('canvas'),ctx=canvas.getContext('2d'),select=find('.clip'),scrub=find('.scrub'),play=find('.play');
+ canvas.setAttribute('aria-label',actor.label+' 모션 미리보기');
+ const state={box,image:null,frames:[],index:0,playing:!matchMedia('(prefers-reduced-motion: reduce)').matches,speed:1,last:0,elapsed:0,token:0,clip:null};
+ function draw(){ctx.clearRect(0,0,512,512);if(state.image&&state.frames.length){const r=state.frames[state.index];ctx.drawImage(state.image,r.x,r.y,r.w,r.h,0,0,512,512)}scrub.value=state.index;find('output').textContent=(state.index+1)+' / '+(state.frames.length||32);canvas.dataset.frame=state.index;play.textContent=state.playing?'일시정지':(state.index===state.frames.length-1?'처음부터 재생':'재생')}
+ function pause(){state.playing=false;state.elapsed=0;draw()}
+ async function load(){
+  const token=++state.token;state.last=0;state.elapsed=0;
+  if(state.image){state.image.onload=null;state.image.onerror=null;state.image.src='';state.image=null}
+  state.frames=[];state.index=0;ctx.clearRect(0,0,512,512);
+  const clip=clips.find(x=>x.name===select.value);state.clip=clip;
+  if(!clip){find('.status').textContent='아직 준비된 동작이 없습니다.';return}
+  find('.status').textContent='원본 시트 불러오는 중…';
+  find('.original').href=clip.sheet;find('.info').textContent=clip.duration+'초 · '+(clip.loop?'반복':'1회')+' · 512×512';
+  try{
+   const response=await fetch(clip.atlas);if(!response.ok)throw Error('프레임 정보 불러오기 실패');
+   const atlas=await response.json();if(token!==state.token)return;
+   state.frames=Object.keys(atlas.frames).sort((a,b)=>Number(a)-Number(b)).map(k=>atlas.frames[k].frame||atlas.frames[k]);
+   scrub.max=state.frames.length-1;
+   const image=new Image();state.image=image;
+   image.onload=()=>{if(token!==state.token)return;state.last=0;find('.status').textContent=clip.label+' · '+state.frames.length+'프레임';draw()};
+   image.onerror=()=>{if(token!==state.token)return;state.frames=[];find('.status').textContent='이미지를 불러오지 못했습니다.'};
+   image.src=clip.sheet;
+  }catch(error){if(token===state.token)find('.status').textContent=error.message}
+ }
+ for(const clip of clips){const option=document.createElement('option');option.value=clip.name;option.textContent=clip.label;select.append(option)}
+ select.value=clips.some(x=>x.name===(actor.name==='hero'?'run':'walk'))?(actor.name==='hero'?'run':'walk'):(clips.find(x=>x.name==='idle')||clips[0]||{}).name||'';
+ select.onchange=()=>{state.playing=!matchMedia('(prefers-reduced-motion: reduce)').matches;load()};
+ play.onclick=()=>{if(!state.frames.length)return;if(state.index===state.frames.length-1)state.index=0;state.playing=!state.playing;state.elapsed=0;draw()};
+ find('.previous').onclick=()=>{state.index=Math.max(0,state.index-1);pause()};
+ find('.next').onclick=()=>{if(!state.frames.length)return;state.index=Math.min(state.frames.length-1,state.index+1);pause()};
+ scrub.oninput=()=>{state.index=Number(scrub.value);pause()};
+ find('.speed').onchange=e=>{state.speed=Number(e.target.value);state.elapsed=0};
+ state.tick=now=>{const delta=state.last?Math.min(now-state.last,150):0;state.last=now;if(!state.playing||box.hidden||document.hidden||!state.image?.complete||!state.image.naturalWidth||!state.frames.length)return;state.elapsed+=delta*state.speed;const step=state.clip.duration*1000/state.frames.length;if(state.elapsed>=step){const steps=Math.floor(state.elapsed/step);state.elapsed%=step;state.index+=steps;if(state.index>=state.frames.length){if(state.clip.loop)state.index%=state.frames.length;else{state.index=state.frames.length-1;state.playing=false}}draw()}};
+ document.getElementById('viewers').append(box);viewers.push(state);draw();load()
+}
+fetch('manifest.json').then(r=>{if(!r.ok)throw Error('동작 목록을 불러오지 못했습니다.');return r.json()}).then(data=>{for(const actor of data.characters)makeViewer(actor,data.clips.filter(x=>x.character===actor.name));document.getElementById('message').textContent='현재 '+data.clips.length+' / 55개 동작'}).catch(e=>document.getElementById('message').textContent=e.message);
+function tick(now){for(const state of viewers)state.tick(now);requestAnimationFrame(tick)}requestAnimationFrame(tick);
+for(const button of document.querySelectorAll('[data-filter]'))button.onclick=()=>{for(const b of document.querySelectorAll('[data-filter]'))b.setAttribute('aria-pressed',String(b===button));for(const v of viewers){v.box.hidden=button.dataset.filter!=='all'&&v.box.dataset.character!==button.dataset.filter;v.last=0}};
+let bg=0;document.getElementById('background').onclick=()=>{bg=(bg+1)%3;document.body.dataset.bg=['gray','light','dark'][bg];document.getElementById('background').textContent='배경: '+['회색','흰색','어두움'][bg]};
 </script></html>

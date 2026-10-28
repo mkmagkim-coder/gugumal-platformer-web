@@ -120,8 +120,22 @@ body {
 
 		<script src="index.js"></script>
 		<script>
-const GODOT_CONFIG = {"args":[],"canvasResizePolicy":2,"emscriptenPoolSize":8,"ensureCrossOriginIsolationHeaders":false,"executable":"index","experimentalVK":false,"fileSizes":{"index.pck":102915740,"index.wasm":39514754},"focusCanvas":true,"gdextensionLibs":[],"godotPoolSize":4,"serviceWorker":"index.service.worker.js"};
+const GODOT_CONFIG = {"args":[],"canvasResizePolicy":2,"emscriptenPoolSize":8,"ensureCrossOriginIsolationHeaders":false,"executable":"index","experimentalVK":false,"fileSizes":{"index.pck":103013576,"index.wasm":39514754},"focusCanvas":true,"gdextensionLibs":[],"godotPoolSize":4,"serviceWorker":"index.service.worker.js"};
 const GODOT_THREADS_ENABLED = false;
+// motion-packs:begin
+const MOTION_PACK_FILES = ["motion-packs.json", "motion-bf2c63f173454e49-01.pck", "motion-0aa438a6d2b67a87-02.pck"];
+Object.assign(GODOT_CONFIG.fileSizes, {"motion-packs.json": 328, "motion-bf2c63f173454e49-01.pck": 98186368, "motion-0aa438a6d2b67a87-02.pck": 61533540});
+GODOT_CONFIG.onProgress = function(current, total) {
+    const statusProgress = document.getElementById('status-progress');
+    if (current > 0 && total > 0) {
+        statusProgress.value = current;
+        statusProgress.max = total;
+    } else {
+        statusProgress.removeAttribute('value');
+        statusProgress.removeAttribute('max');
+    }
+};
+// motion-packs:end
 const engine = new Engine(GODOT_CONFIG);
 
 (function () {
@@ -208,7 +222,8 @@ const engine = new Engine(GODOT_CONFIG);
 		}
 	} else {
 		setStatusMode('progress');
-		engine.startGame({
+		Promise.all(MOTION_PACK_FILES.map(name => engine.preloadFile(name, '/' + name)))
+		.then(() => engine.startGame({
 			'onProgress': function (current, total) {
 				if (current > 0 && total > 0) {
 					statusProgress.value = current;
@@ -218,7 +233,7 @@ const engine = new Engine(GODOT_CONFIG);
 					statusProgress.removeAttribute('max');
 				}
 			},
-		}).then(() => {
+		})).then(() => {
 			setStatusMode('hidden');
 		}, displayFailureNotice);
 	}
